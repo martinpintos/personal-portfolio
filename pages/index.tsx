@@ -12,8 +12,16 @@ import {
   VStack,
   Heading,
   Img,
+  Image,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  AnimateSharedLayout,
+  useAnimation,
+} from "framer-motion";
 
 const Index = () => {
   return (
@@ -23,31 +31,73 @@ const Index = () => {
           <Flex
             position="sticky"
             top="0"
-            h={16}
+            h={{ base: 16, lg: "88px" }}
             as="header"
             justifyContent="space-between"
             alignItems="center"
           >
-            <Box>
-              <Img maxWidth="50px" src="/images/logo.png" />
-            </Box>
-            <HStack as={"nav"} spacing={{ base: 4, sm: 8, md: 16, lg: 24 }}>
-              <Link fontWeight="600">Works</Link>
-              <Link fontWeight="600">Experience</Link>
-              <Link fontWeight="600">Contact</Link>
+            <Link textDecoration="none">
+              <Box
+                alignItems="center"
+                initial={{ y: -50 }}
+                animate={{ y: 0 }}
+                as={motion.div}
+              >
+                <Image maxWidth="48px" src="/images/logo2.svg" alt="Logo" />
+              </Box>
+            </Link>
+            <HStack
+              initial={{ y: -50 }}
+              animate={{ y: 0 }}
+              as={motion.nav}
+              spacing={{ base: 4, sm: 8, md: 16, lg: 24 }}
+            >
+              <Link fontSize={{ md: 18, xl: 20 }} fontWeight="500">
+                Works
+              </Link>
+              <Link fontSize={{ md: 18, xl: 20 }} fontWeight="500">
+                Experience
+              </Link>
+              <Link fontSize={{ md: 18, xl: 20 }} fontWeight="500">
+                Contact
+              </Link>
             </HStack>
           </Flex>
-          <Box maxW="container">
-            <Heading as="h1" fontSize={{ base: 74, sm: 100, md: 140 }}>
-              I&#x27;m Martín, a Creative Developer based in Buenos Aires.
+          <Box maxW="container" mt={{ base: 8, sm: 0 }}>
+            <Heading
+              lineHeight="1.15"
+              initial={{ y: -50 }}
+              animate={{ y: 0 }}
+              as={motion.h1}
+              fontSize={{ base: 74, sm: 100, md: 144 }}
+              fontWeight="bold"
+            >
+              I&#x27;m Martín, a{" "}
+              <Text
+                display="inline"
+                bgGradient="linear(to-br, #7928CA, #FF0080)"
+                bgClip="text"
+              >
+                Creative Developer
+              </Text>{" "}
+              based in Buenos Aires.
             </Heading>
           </Box>
-          <Box
-            mt={16}
-            h="1200px"
-            backgroundColor="green.500"
-            fontWeight="400"
-          ></Box>
+          <Box mt="140px" fontWeight="400">
+            <Heading my={6} as="h2" fontWeight="medium" size="4xl">
+              Selected works
+            </Heading>
+          </Box>
+        </Container>
+        <Container h="600px" backgroundColor="green.500" maxWidth="100%">
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+          >
+            <Box>asda</Box>
+            <Box>sadas</Box>
+          </Stack>
         </Container>
       </AnimateSharedLayout>
     </>
