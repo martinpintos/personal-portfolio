@@ -70,17 +70,9 @@ const Index = () => {
               animate={{ y: 0 }}
               as={motion.h1}
               fontSize={{ base: 74, sm: 100, md: 144 }}
-              fontWeight="bold"
+              fontWeight="600"
             >
-              I&#x27;m Martín, a{" "}
-              <Text
-                display="inline"
-                bgGradient="linear(to-br, #7928CA, #FF0080)"
-                bgClip="text"
-              >
-                Creative Developer
-              </Text>{" "}
-              based in Buenos Aires.
+              I&#x27;m Martín, a Creative Developer based in Buenos Aires.
             </Heading>
           </Box>
           <Box mt="140px" fontWeight="400">
