@@ -29,7 +29,7 @@ const Index = () => {
             alignItems="center"
           >
             <Box>
-              <Img maxWidth="55px" src="/images/logo.png" />
+              <Img maxWidth="50px" src="/images/logo.png" />
             </Box>
             <HStack as={"nav"} spacing={{ base: 4, sm: 8, md: 16, lg: 24 }}>
               <Link fontWeight="600">Works</Link>
