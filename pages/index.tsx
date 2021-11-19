@@ -39,7 +39,7 @@ const Index = () => {
           </Flex>
           <Box maxW="container">
             <Heading as="h1" fontSize={{ base: 74, sm: 100, md: 140 }}>
-              I'm Martín, a Creative Developer based in Buenos Aires.
+              I&#x27;m Martín, a Creative Developer based in Buenos Aires.
             </Heading>
           </Box>
           <Box
