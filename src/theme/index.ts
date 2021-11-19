@@ -9,6 +9,9 @@ const theme = extendTheme({
     gray: {
       800: "#131316",
     },
+    green: {
+      300: "#94d82d",
+    },
   },
 });
 

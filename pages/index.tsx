@@ -13,6 +13,7 @@ import {
   Heading,
   Img,
   Image,
+  Divider,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -75,13 +76,66 @@ const Index = () => {
               I&#x27;m Martín, a Creative Developer based in Buenos Aires.
             </Heading>
           </Box>
-          <Box mt="140px" fontWeight="400">
+          <Box my="144px" fontWeight="400">
+            <Divider
+              color="gray.500"
+              border="solid"
+              borderWidth="4px"
+              opacity="100%"
+            />
             <Heading my={6} as="h2" fontWeight="medium" size="4xl">
               Selected works
             </Heading>
+            <Stack direction={["column", "row"]} spacing={4}>
+              <Box backgroundColor="green.300" p={4}>
+                <VStack>
+                  <Image
+                    mb={4}
+                    src="https://place-hold.it/400x300"
+                    alt="Project"
+                  />
+                  <Heading alignSelf="start">Todo App</Heading>
+                  <Text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium quia pariatur quidem unde, iusto explicabo,
+                    quisquam magni ipsam maiores natus assumenda!
+                  </Text>
+                </VStack>
+              </Box>
+              <Box backgroundColor="green.300" p={4}>
+                <VStack>
+                  <Image
+                    mb={4}
+                    src="https://place-hold.it/400x300"
+                    alt="Project"
+                  />
+                  <Heading alignSelf="start">Todo App</Heading>
+                  <Text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium quia pariatur quidem unde, iusto explicabo,
+                    quisquam magni ipsam maiores natus assumenda!
+                  </Text>
+                </VStack>
+              </Box>
+              <Box backgroundColor="green.300" p={4}>
+                <VStack>
+                  <Image
+                    mb={4}
+                    src="https://place-hold.it/400x300"
+                    alt="Project"
+                  />
+                  <Heading alignSelf="start">Todo App</Heading>
+                  <Text>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium quia pariatur quidem unde, iusto explicabo,
+                    quisquam magni ipsam maiores natus assumenda!
+                  </Text>
+                </VStack>
+              </Box>
+            </Stack>
           </Box>
         </Container>
-        <Container h="600px" backgroundColor="green.500" maxWidth="100%">
+        {/* <Container h="600px" backgroundColor="green.500" maxWidth="100%">
           <Stack
             direction="row"
             alignItems="center"
@@ -90,7 +144,7 @@ const Index = () => {
             <Box>asda</Box>
             <Box>sadas</Box>
           </Stack>
-        </Container>
+        </Container> */}
       </AnimateSharedLayout>
     </>
   );
