@@ -6,12 +6,14 @@ const theme = extendTheme({
     body: `Archivo, ${base.fonts?.body}`,
   },
   colors: {
+    white: "#ececec",
+    black: "#000",
     gray: {
       800: "#000",
     },
     brand: {
-      500: "#94d82d",
-      800: "#2c410d",
+      500: "#BDDA57",
+      800: "#3C4810",
     },
   },
 });

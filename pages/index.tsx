@@ -31,15 +31,25 @@ import {
 } from "framer-motion";
 
 const Index = () => {
+  const { toggleColorMode } = useColorMode();
   const textShadowHeading = useColorModeValue(
     "rgba(0, 0, 0, 0.8) 0px 0px 3px",
     "#fff 0px 0px 3px"
   );
   const textShadowBody = useColorModeValue(
     "rgba(0, 0, 0, 0.6) 0px 0px 1px",
-    "#fff 0px 0px 1px"
+    "#fff 0px 0px 2px"
   );
   const backgroundCardColor = useColorModeValue("brand.500", "brand.800");
+  const logoStyle = useColorModeValue(
+    "drop-shadow(rgba(0, 0, 0, 0.8) 0px 0px 1px)",
+    "drop-shadow(#fff 0px 0px 2px) invert(1)"
+  );
+  const shadowCard = useColorModeValue(
+    "rgba(189, 218, 87, 1) 0px 0px 4px",
+    "rgba(60, 72, 16, 1) 0px 0px 6px"
+  );
+  const dividerColor = useColorModeValue("black", "white");
 
   return (
     <>
@@ -48,7 +58,11 @@ const Index = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <AnimateSharedLayout>
-        <Container maxW="container.xl">
+        <Container
+          maxW="container.xl"
+          position="relative"
+          left={{ base: "0", lg: "75px" }}
+        >
           <Flex
             position="sticky"
             top="0"
@@ -64,9 +78,10 @@ const Index = () => {
                 animate={{ y: 0 }}
                 as={motion.div}
                 whileHover={{ scale: 1.2 }}
+                onClick={toggleColorMode}
               >
                 <Image
-                  filter="drop-shadow(rgba(0, 0, 0, 0.8) 0px 0px 1px)"
+                  filter={logoStyle}
                   maxWidth="48px"
                   src="/images/logo2.svg"
                   alt="Logo"
@@ -131,7 +146,7 @@ const Index = () => {
             </Heading>
           </Box>
           <Box
-            my="220px"
+            mt="220px"
             fontWeight="400"
             initial={{ y: -200 }}
             animate={{ y: 0 }}
@@ -139,13 +154,14 @@ const Index = () => {
           >
             <Divider
               border="solid"
-              borderColor="black"
+              borderColor={dividerColor}
               opacity="100"
-              background="black"
-              boxShadow="rgba(0, 0, 0, 0.8) 0px 0px 2px"
+              background={dividerColor}
+              boxShadow="rgba(0, 0, 0, 0.8) 0px 0px 3px"
             />
             <Heading
-              my={4}
+              mt={0}
+              mb={5}
               as="h2"
               fontWeight="medium"
               size="4xl"
@@ -154,8 +170,12 @@ const Index = () => {
             >
               Selected works
             </Heading>
-            <SimpleGrid columns={[1, null, 3]} spacing={4}>
-              <Box backgroundColor={backgroundCardColor} p={4}>
+            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={4}>
+              <Box
+                backgroundColor={backgroundCardColor}
+                p={4}
+                boxShadow={shadowCard}
+              >
                 <VStack>
                   <Image
                     mb={4}
@@ -178,7 +198,11 @@ const Index = () => {
                   </Text>
                 </VStack>
               </Box>
-              <Box backgroundColor={backgroundCardColor} p={4}>
+              <Box
+                backgroundColor={backgroundCardColor}
+                p={4}
+                boxShadow={shadowCard}
+              >
                 <VStack>
                   <Image
                     mb={4}
@@ -201,7 +225,11 @@ const Index = () => {
                   </Text>
                 </VStack>
               </Box>
-              <Box backgroundColor={backgroundCardColor} p={4}>
+              <Box
+                backgroundColor={backgroundCardColor}
+                p={4}
+                boxShadow={shadowCard}
+              >
                 <VStack>
                   <Image
                     mb={4}
@@ -224,7 +252,11 @@ const Index = () => {
                   </Text>
                 </VStack>
               </Box>
-              <Box backgroundColor={backgroundCardColor} p={4}>
+              <Box
+                backgroundColor={backgroundCardColor}
+                p={4}
+                boxShadow={shadowCard}
+              >
                 <VStack>
                   <Image
                     mb={4}
@@ -247,7 +279,11 @@ const Index = () => {
                   </Text>
                 </VStack>
               </Box>
-              <Box backgroundColor={backgroundCardColor} p={4}>
+              <Box
+                backgroundColor={backgroundCardColor}
+                p={4}
+                boxShadow={shadowCard}
+              >
                 <VStack>
                   <Image
                     mb={4}
@@ -272,17 +308,33 @@ const Index = () => {
               </Box>
             </SimpleGrid>
           </Box>
-        </Container>
-        {/* <Container h="600px" backgroundColor="green.500" maxWidth="100%">
-          <Stack
-            direction="row"
-            alignItems="center"
-            justifyContent="space-between"
+          <Box
+            mt="100px"
+            fontWeight="400"
+            initial={{ y: -200 }}
+            animate={{ y: 0 }}
+            as={motion.h1}
           >
-            <Box>asda</Box>
-            <Box>sadas</Box>
-          </Stack>
-        </Container> */}
+            <Divider
+              border="solid"
+              borderColor={dividerColor}
+              opacity="100"
+              background={dividerColor}
+              boxShadow="rgba(0, 0, 0, 0.8) 0px 0px 3px"
+            />
+            <Heading
+              mt={0}
+              mb={5}
+              as="h2"
+              fontWeight="medium"
+              size="4xl"
+              letterSpacing="-3px"
+              textShadow={textShadowHeading}
+            >
+              Experience
+            </Heading>
+          </Box>
+        </Container>
       </AnimateSharedLayout>
     </>
   );
