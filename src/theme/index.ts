@@ -7,10 +7,11 @@ const theme = extendTheme({
   },
   colors: {
     gray: {
-      800: "#131316",
+      800: "#000",
     },
-    green: {
-      300: "#94d82d",
+    brand: {
+      500: "#94d82d",
+      800: "#2c410d",
     },
   },
 });
