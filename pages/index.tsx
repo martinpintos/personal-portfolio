@@ -36,8 +36,8 @@ const Index = () => {
     "#fff 0px 0px 3px"
   );
   const textShadowBody = useColorModeValue(
-    "rgba(0, 0, 0, 0.8) 0px 0px 1px",
-    "#fff 0px 0px 2px"
+    "rgba(0, 0, 0, 0.6) 0px 0px 1px",
+    "#fff 0px 0px 1px"
   );
   const backgroundCardColor = useColorModeValue("brand.500", "brand.800");
 
