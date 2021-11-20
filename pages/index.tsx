@@ -42,7 +42,7 @@ const Index = () => {
   );
   const backgroundCardColor = useColorModeValue("brand.500", "brand.800");
   const logoStyle = useColorModeValue(
-    "drop-shadow(rgba(0, 0, 0, 0.8) 0px 0px 1px)",
+    "drop-shadow(rgba(0, 0, 0, 0.8) 0px 0px 2px)",
     "drop-shadow(#fff 0px 0px 2px) invert(1)"
   );
   const shadowCard = useColorModeValue(
