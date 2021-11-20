@@ -141,13 +141,7 @@ const Index = () => {
               I&#x27;m Martín, a creative developer based in Buenos Aires.
             </Heading>
           </Box>
-          <Box
-            mt="220px"
-            fontWeight="400"
-            initial={{ y: -200 }}
-            animate={{ y: 0 }}
-            as={motion.h1}
-          >
+          <Box mt="220px" fontWeight="400">
             <Divider
               border="solid"
               borderColor={dividerColor}
@@ -158,11 +152,13 @@ const Index = () => {
             <Heading
               mt={0}
               mb={5}
-              as="h2"
               fontWeight="medium"
               size="4xl"
               letterSpacing="-3px"
               textShadow={textShadowHeading}
+              initial={{ x: -400 }}
+              animate={{ x: 0 }}
+              as={motion.h2}
             >
               Selected works
             </Heading>
@@ -171,6 +167,8 @@ const Index = () => {
                 backgroundColor={backgroundCardColor}
                 p={4}
                 boxShadow={shadowCard}
+                as={motion.div}
+                whileHover={{ scale: 1.03 }}
               >
                 <VStack>
                   <Image
@@ -198,6 +196,8 @@ const Index = () => {
                 backgroundColor={backgroundCardColor}
                 p={4}
                 boxShadow={shadowCard}
+                as={motion.div}
+                whileHover={{ scale: 1.03 }}
               >
                 <VStack>
                   <Image
@@ -225,6 +225,8 @@ const Index = () => {
                 backgroundColor={backgroundCardColor}
                 p={4}
                 boxShadow={shadowCard}
+                as={motion.div}
+                whileHover={{ scale: 1.03 }}
               >
                 <VStack>
                   <Image
@@ -252,6 +254,8 @@ const Index = () => {
                 backgroundColor={backgroundCardColor}
                 p={4}
                 boxShadow={shadowCard}
+                as={motion.div}
+                whileHover={{ scale: 1.03 }}
               >
                 <VStack>
                   <Image
@@ -279,6 +283,8 @@ const Index = () => {
                 backgroundColor={backgroundCardColor}
                 p={4}
                 boxShadow={shadowCard}
+                as={motion.div}
+                whileHover={{ scale: 1.03 }}
               >
                 <VStack>
                   <Image
@@ -304,13 +310,7 @@ const Index = () => {
               </Box>
             </SimpleGrid>
           </Box>
-          <Box
-            mt="100px"
-            fontWeight="400"
-            initial={{ y: -200 }}
-            animate={{ y: 0 }}
-            as={motion.h1}
-          >
+          <Box mt="100px" fontWeight="400">
             <Divider
               border="solid"
               borderColor={dividerColor}
@@ -321,11 +321,13 @@ const Index = () => {
             <Heading
               mt={0}
               mb={5}
-              as="h2"
               fontWeight="medium"
               size="4xl"
               letterSpacing="-3px"
               textShadow={textShadowHeading}
+              initial={{ x: -400 }}
+              animate={{ x: 0 }}
+              as={motion.h2}
             >
               Experience
             </Heading>
