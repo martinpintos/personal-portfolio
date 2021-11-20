@@ -58,11 +58,7 @@ const Index = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <AnimateSharedLayout>
-        <Container
-          maxW="container.xl"
-          position="relative"
-          left={{ base: "0", lg: "75px" }}
-        >
+        <Container maxW="container.xl">
           <Flex
             position="sticky"
             top="0"
