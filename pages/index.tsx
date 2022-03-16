@@ -96,6 +96,7 @@ const Index = () => {
                 fontSize={{ md: 18, xl: 20 }}
                 as={motion.a}
                 whileHover={{ scale: 1.2 }}
+                href="#works"
               >
                 Works
               </Link>
@@ -152,6 +153,7 @@ const Index = () => {
             <Heading
               mt={0}
               mb={5}
+              id="works"
               fontWeight="medium"
               size="4xl"
               letterSpacing="-3px"
@@ -171,24 +173,19 @@ const Index = () => {
                 whileHover={{ scale: 1.03 }}
               >
                 <VStack>
-                  <Image
-                    mb={4}
-                    src="https://place-hold.it/400x300"
-                    alt="Project"
-                  />
+                  <Image mb={4} src="/images/anime-app.png" alt="Project" />
                   <Link
                     alignSelf="start"
-                    href="https://chakra-ui.com"
+                    href="https://nextjs-anime-app-eta.vercel.app/"
                     isExternal
                   >
                     <Heading>
-                      Todo App <ExternalLinkIcon mx="2px" fontSize="20px" />
+                      Anime App <ExternalLinkIcon mx="2px" fontSize="20px" />
                     </Heading>{" "}
                   </Link>
                   <Text>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laudantium quia pariatur quidem unde, iusto explicabo,
-                    quisquam magni ipsam maiores natus assumenda!
+                    App made with React, Next.js, TypeScript, Chakra UI and the
+                    Jikan API.
                   </Text>
                 </VStack>
               </Box>
